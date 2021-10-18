@@ -1,10 +1,5 @@
 import {BaseThemeColors} from "./constants";
 
-// export const ColorActions = {
-//     SET_PRIMARY_COLOR: 'SET_PRIMARY_COLOR',
-//     INVERT_THEME: 'INVERT_THEME',
-// }
-
 export type ColorThemeState = {
     [key: string]: string;
 }
@@ -21,6 +16,7 @@ export function colorThemeReducer(
     action: ColorThemeAction
 ): ColorThemeState { // useReducer may have a type for 'action'
     switch (action.type) {
+        // will add dark mode toggle, primary color theming, etc.
         default:
             return {...state};
     }

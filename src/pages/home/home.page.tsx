@@ -1,6 +1,9 @@
 import React from 'react';
-import {Container} from "react-bootstrap";
+import {AboutSection, ContactSection, EventsSection, HeroSection} from "../../sections";
 
-export const HomePage = () => <Container>
-    <p>home page content</p>
-</Container>
+export const HomePage = () => <div>
+    <HeroSection />
+    <EventsSection />
+    <AboutSection />
+    <ContactSection />
+</div>

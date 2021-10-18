@@ -1,14 +1,21 @@
 import React from 'react';
-import './utilities/styling/styled-theme-provider/boostrap.bundler.scss';
-import {StyledComponentsProvider} from './utilities';
+import './utilities/styling/styled-theme-provider/global.styles.scss';
+import {StyledComponentsProvider, ScrollingProvider, ScrollingAnchor} from './utilities';
 import {HomePage} from './pages';
 import {HeaderNavComponent} from "./components/header-nav";
 
+/**
+ * Currently a Single Page App (SPA) that has a few sections
+ * @constructor
+ */
 function App() {
     return (
         <StyledComponentsProvider>
-            <HeaderNavComponent />
-            <HomePage />
+            <ScrollingProvider>
+                <ScrollingAnchor anchorId={'home'} /> {/* clever way to get around local anchor linking */}
+                <HeaderNavComponent />
+                <HomePage />
+            </ScrollingProvider>
         </StyledComponentsProvider>
     );
 }
