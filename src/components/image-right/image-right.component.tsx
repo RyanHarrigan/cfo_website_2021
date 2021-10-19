@@ -21,7 +21,7 @@ export const ImageRightComponent = ({imageData, children, className}: SectionWit
         span: 6,
         offset: 0,
     };
-    return <Row className={`position-relative justify-content-md-center ${className}`}>
+    return <Row className={`py-4 position-relative justify-content-md-center ${className}`}>
         <Col
             md={leftWide}
             sm={leftNarrow}

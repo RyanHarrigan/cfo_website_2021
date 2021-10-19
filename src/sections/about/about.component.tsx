@@ -11,10 +11,10 @@ const ContentStyled = styled(ImageRightComponent)`
 
 const FloatingIconBg = styled.img`
   position: absolute;
-  max-width: 80vw;
-  height: 90%;
-  right: -15vw;
-  top: -5%;
+  max-width: 30em;
+  max-height: 90%;
+  right: -5vw;
+  top: 5%;
   opacity: 0.2;
   color: var(--bs-white);
 `;

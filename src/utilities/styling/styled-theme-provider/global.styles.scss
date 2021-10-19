@@ -11,16 +11,27 @@ Any additional contributions to this file will only further complicate the issue
     top: 50%;
     transform: translateY(-25%) scaleX(-1) scale(1.5);
     z-index: -1;
-    right: -5em;
+    right: -3em;
   }
 
-  .hide-section-image-md img {
+  .hide-section-image-md img.section-image {
     display: none;
+  }
+
+  .btn-meetup, .btn-get-involved {
+    min-width: 10em;
   }
 }
 
 // Meetup button styles. Note #e51937 -> hsl = hsl(351, 80%, 50%)
 .btn-meetup {
   @include button-variant(hsl(351, 80%, 50%), hsl(351, 60%, 50%));
-  color: var(--bs-white)
+  color: var(--bs-white);
+}
+.btn-get-involved {
+  @include button-variant(hsl(30, 92%, 58%), hsl(35, 93.9%, 93.5%));
+  color: var(--bs-white);
+  &:hover{
+    color: var(--bs-white);
+  }
 }

@@ -1,9 +1,11 @@
+/** @jsxImportSource @emotion/react */
 import {Container, Nav, Navbar} from "react-bootstrap";
 import React, {useState} from "react";
 import {LogoStyled, NavbarToggleStyled, NavStyled, NavLinkStyles, NavbarStyled} from './header-nav.styles';
 import {ScrollingLink} from '../../utilities';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import styled from "@emotion/styled";
 
 const Toggle = ({ariaControls}: {ariaControls: string}) => {
     const [isToggled, setIsToggled] = useState(false);
@@ -14,6 +16,15 @@ const Toggle = ({ariaControls}: {ariaControls: string}) => {
         <FontAwesomeIcon icon={faBars} color={color} />
     </NavbarToggleStyled>
 }
+
+const ImageStyled = styled.img`
+  width: 1.5em;
+  height: 1.5em;
+`;
+
+const ExternalLink = styled(Nav.Link)`
+  text-decoration: underline;
+`;
 
 export const HeaderNavComponent = () => {
     const [activeKey, setActiveKey] = useState('home');
@@ -36,16 +47,27 @@ export const HeaderNavComponent = () => {
                     justify
                 >
                     <Nav.Item>
-                        <ScrollingLink cssStyles={NavLinkStyles} toAnchor={'home'} >Home</ScrollingLink>
+                        <ScrollingLink cssStyles={NavLinkStyles} toAnchor={'home'}>Home</ScrollingLink>
                     </Nav.Item>
                     <Nav.Item>
-                        <ScrollingLink cssStyles={NavLinkStyles} toAnchor={'events'} >Events</ScrollingLink>
+                        <ScrollingLink cssStyles={NavLinkStyles} toAnchor={'events'}>Events</ScrollingLink>
                     </Nav.Item>
                     <Nav.Item>
-                        <ScrollingLink cssStyles={NavLinkStyles} toAnchor={'about'} >About</ScrollingLink>
+                        <ScrollingLink cssStyles={NavLinkStyles} toAnchor={'about'}>About</ScrollingLink>
                     </Nav.Item>
                     <Nav.Item>
-                        <ScrollingLink cssStyles={NavLinkStyles} toAnchor={'contact'} >Contact</ScrollingLink>
+                        <ScrollingLink cssStyles={NavLinkStyles} toAnchor={'contact'}>Contact</ScrollingLink>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <ExternalLink
+                            className={'external d-flex justify-content-center'}
+                            css={NavLinkStyles}
+                            href={'https://github.com/cforlando/codeofconduct'}
+                            target={'_blank'}
+                        >
+                            <span>Conduct</span>
+                            {/*<ImageStyled className={'px-1'} src={'/external-link.svg'} />*/}
+                        </ExternalLink>
                     </Nav.Item>
                 </NavStyled>
             </Navbar.Collapse>

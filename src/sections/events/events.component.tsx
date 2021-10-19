@@ -35,6 +35,10 @@ const FloatingIconBg = styled.img`
   color: var(--bs-white);
 `;
 
+const ButtonStyled = styled(Button)`
+  min-width: 15em;
+`;
+
 export const EventsSection = () => {
     return <ScrollingAnchor anchorId={'events'}>
         <SectionStyled>
@@ -50,9 +54,12 @@ export const EventsSection = () => {
                         meetings.
                     </p>
 
-                    <div className={"my-4 d-flex justify-content-center"}>
-                        <Button className={'d-flex align-items-center'} variant="meetup" size="lg" href={'https://www.meetup.com/Code-For-Orlando/'} target={'_blank'}>
-                            <ButtonImage src={'/meetup.svg'} width={40} height={40} /><span className={'px-2'}>Meetup!</span>
+                    <div className={"my-4 d-flex flex-wrap justify-content-center"}>
+                        <Button className={'d-flex my-3 align-items-center mx-3'} variant="meetup" size="lg" href={'https://www.meetup.com/Code-For-Orlando/'} target={'_blank'}>
+                            <ButtonImage src={'/meetup.svg'} width={40} height={40} /><span className={'px-2'}>Meet us!</span>
+                        </Button>
+                        <Button className={'d-flex my-3 align-items-center'} variant="get-involved" size="lg" href={'https://docs.google.com/forms/d/e/1FAIpQLSdb15ewHn06IMLzaWPrqqrEsfh7Xso2A5N4OIkHDpYJ7Z2ajA/viewform'} target={'_blank'}>
+                            <ButtonImage src={'/logo_small_white.svg'} width={40} height={40} /><span className={'px-2'}>Get Involved</span>
                         </Button>
                     </div>
                 </ContentStyled>

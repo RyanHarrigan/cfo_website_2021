@@ -41,10 +41,10 @@ const scrollToAnchor = (toRef: any) => {
     }
 }
 
-export const ScrollingLink = ({toAnchor, children, cssStyles}: {toAnchor: string, children: any, cssStyles?: SerializedStyles}) => {
+export const ScrollingLink = ({toAnchor, children}: {toAnchor: string, children: any, cssStyles?: SerializedStyles}) => {
     const {anchorRefs} = useContext(ScrollRegisterContext);
 
-    return <Nav.Link css={cssStyles ?? css``} eventKey={toAnchor} onClick={() => {
+    return <Nav.Link eventKey={toAnchor} onClick={() => {
         const anchorRef = _.get(anchorRefs, toAnchor, null)
 
         if(anchorRef) {
