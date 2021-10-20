@@ -31,7 +31,12 @@ Any additional contributions to this file will only further complicate the issue
 .btn-get-involved {
   @include button-variant(hsl(30, 92%, 58%), hsl(35, 93.9%, 93.5%));
   color: var(--bs-white);
-  &:hover{
-    color: var(--bs-white);
-  }
+}
+.btn-slack {
+  @include button-variant(hsl(299, 56%, 19%), hsl(299, 36%, 19%));
+  color: var(--bs-white);
+}
+.btn-eventbrite {
+  @include button-variant(hsl(17, 92%, 57%), hsl(17, 72%, 37%));
+  color: var(--bs-white);
 }

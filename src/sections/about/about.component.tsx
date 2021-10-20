@@ -21,11 +21,11 @@ const FloatingIconBg = styled.img`
 
 export const AboutSection = () => {
     return <ScrollingAnchor anchorId={'about'}>
-        <div className={'position-relative'}>
+        <section className={'position-relative'}>
             <FloatingIconBg src={'/about.png'} />
             <Container>
                 <ContentStyled className={'hide-section-image-md align-items-center'} imageData={{src: '/about.png', alt: 'Sketch of techie-person writing some notes'}} >
-                    <h1>About us</h1>
+                    <h2>About us</h2>
 
                     <p>
                         Code for Orlando, a local Code for America brigade, brings the community together to improve
@@ -35,6 +35,6 @@ export const AboutSection = () => {
                     </p>
                 </ContentStyled>
             </Container>
-        </div>
+        </section>
     </ScrollingAnchor>
 }

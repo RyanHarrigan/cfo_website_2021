@@ -20,19 +20,18 @@ const FloatingIconBg = styled.img`
 `;
 
 export const HeroSection = () => {
-    return <div className={'position-relative'}>
+    return <section className={'position-relative'}>
         <FloatingIconBg src={'/logo_small_orange.svg'} />
         <Container>
             <ContentStyled className={'hero-section align-items-center'} imageData={{src: '/person_sketch.png', alt: 'Sketch of techie-person writing some notes'}} >
-                <h1>Responsive left-aligned hero with image</h1>
+                <h1>Code for Orlando</h1>
 
                 <p>
-                    Meeting with local developers (or anyone interested in web development) is an essential part of
-                    what makes us special. We cherish community, and enjoy fostering a unique culture of creatives,
-                    developers and individuals interested in tech. Join us on Meetup for upcoming events and online
-                    meetings.
+                    A brigade of <a href={'https://www.codeforamerica.org/'} target={'_blank'}>Code for America</a> based in Orlando, Florida - The City Beautiful. We are
+                    civic techies looking for people any skill set interested to improve community and governmental
+                    services.
                 </p>
             </ContentStyled>
         </Container>
-    </div>
+    </section>
 }

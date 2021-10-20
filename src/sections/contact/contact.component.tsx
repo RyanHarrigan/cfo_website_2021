@@ -9,7 +9,7 @@ const ContentStyled = styled(Row)`
   min-height: 30em;
 `;
 
-const SectionStyled = styled.div`
+const SectionStyled = styled.section`
   color: var(--bs-white);
   background-color: var(--bs-primary);
 `;
@@ -33,8 +33,8 @@ export const ContactSection = () => {
                             <div className={'d-inline-block'} >
                                 <h2>Contact Us</h2>
 
-                                <p>We would love to hear from you.</p>
-                                <p>E: hellocfo@gmail.com P: 407-444-4444</p>
+                                <p>We would love to hear from you! <br/> <a className={'text-secondary'} href={'mailto:hellocfo@gmail.com'}>hellocfo@gmail.com</a></p>
+
                             </div>
                         </div>
                     </Col>
