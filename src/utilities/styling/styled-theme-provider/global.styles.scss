@@ -23,9 +23,14 @@ Any additional contributions to this file will only further complicate the issue
   }
 }
 
+// offset to account for fixed header
+section {
+  scroll-margin-top: 7rem;
+}
+
 // Meetup button styles. Note #e51937 -> hsl = hsl(351, 80%, 50%)
 .btn-meetup {
-  @include button-variant(hsl(351, 80%, 50%), hsl(351, 60%, 50%));
+  @include button-variant(hsl(351, 80%, 50%), hsl(351, 60%, 30%));
   color: var(--bs-white);
 }
 .btn-get-involved {

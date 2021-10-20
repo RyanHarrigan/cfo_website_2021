@@ -17,7 +17,7 @@ export const NavStyled = styled(Nav)`
   max-width: 20em;
 `;
 export const NavLinkStyles = css`
-  text-transform: capitalize;
+  text-transform: uppercase;
   font-weight: 500;
   color: var(--bs-gray-100);
   

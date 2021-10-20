@@ -6,6 +6,10 @@ import {Container} from "react-bootstrap";
 const ContentStyled = styled(ImageRightComponent)`
   height: 70vh;
   min-height: 30em;
+
+  a {
+    color: var(--bs-orange);
+  }
 `;
 
 const FloatingIconBg = styled.img`
@@ -27,9 +31,10 @@ export const HeroSection = () => {
                 <h1>Code for Orlando</h1>
 
                 <p>
-                    A brigade of <a href={'https://www.codeforamerica.org/'} target={'_blank'}>Code for America</a> based in Orlando, Florida - The City Beautiful. We are
-                    civic techies looking for people any skill set interested to improve community and governmental
-                    services.
+                    A brigade of <a href={'https://www.codeforamerica.org/'} target={'_blank'}>Code for America</a>
+                    based in <a href={'https://www.orlando.gov'} target={'_blank'}>Orlando, Florida - The City
+                    Beautiful</a>. We are civic techies looking for people of any skill set whose interested to improve
+                    our community and governmental services.
                 </p>
             </ContentStyled>
         </Container>

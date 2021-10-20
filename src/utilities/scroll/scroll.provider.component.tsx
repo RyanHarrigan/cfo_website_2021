@@ -12,9 +12,18 @@ export type ScrollAnchorContext = {
 
 export const ScrollRegisterContext = React.createContext({} as ScrollAnchorContext);
 
-export const ScrollingAnchor = ({anchorId, children}: {anchorId: string, children?: any}) => {
-    const {anchorDispatch: dispatch} = useContext(ScrollRegisterContext)
+export const ScrollingAnchor = ({anchorId = '', children}: {anchorId: string, children?: any}) => {
     const ref = useRef(null);
+
+    useScrollingAnchor(anchorId, ref);
+
+    return <div ref={ref}>
+        {children}
+    </div>
+};
+
+export function useScrollingAnchor(anchorId:string, ref: RefObject<any>) {
+    const {anchorDispatch: dispatch} = useContext(ScrollRegisterContext);
 
     useEffect(() => {
         const anchorRef = ref?.current;
@@ -25,30 +34,21 @@ export const ScrollingAnchor = ({anchorId, children}: {anchorId: string, childre
 
         return () =>  dispatch({type: "DEREGISTER_REF", anchorId})
     }, [ref, anchorId]);
-
-    return <div ref={ref}>
-        {children}
-    </div>
-};
-
-const scrollToAnchor = (toRef: any) => {
-    try {
-        toRef?.scrollIntoView({
-            behavior: "smooth",
-        });
-    } catch {
-        // do nothing
-    }
 }
 
-export const ScrollingLink = ({toAnchor, children}: {toAnchor: string, children: any, cssStyles?: SerializedStyles}) => {
+export const ScrollingLink = ({toAnchor, children, cssStyles}: {toAnchor: string, children: any, cssStyles?: SerializedStyles}) => {
     const {anchorRefs} = useContext(ScrollRegisterContext);
 
-    return <Nav.Link eventKey={toAnchor} onClick={() => {
-        const anchorRef = _.get(anchorRefs, toAnchor, null)
+    return <Nav.Link css={cssStyles} eventKey={toAnchor} onClick={() => {
+        const anchorRef: any = _.get(anchorRefs, toAnchor, null)
 
-        if(anchorRef) {
-            scrollToAnchor(anchorRef)
+        try {
+            window.location.href = `${window.location.protocol}//${window.location.host}#${toAnchor}`
+            anchorRef?.scrollIntoView({
+                behavior: "smooth",
+            });
+        } catch {
+            // do nothing
         }
     }}>
         {children}
