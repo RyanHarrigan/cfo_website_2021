@@ -16,24 +16,35 @@ const SectionStyled = styled.section`
   z-index: 1;
   position: relative;
   margin-bottom: 5em;
+`;
+
+const SectionBg = styled.div`
+  position: absolute;
+  z-index: -2;
+  width: 180%;
+  left: -40%;
+  height: 120%;
+  top: -10%;
+  background: linear-gradient(0deg, rgba(245,178,49,1) 0%, rgba(242,148,37,1) 100%);
+  border-radius: 50% / 40%;
+  overflow: hidden;
   
   &:before {
-    content: '';
+    width: 100%;
+    height: 100%;
     position: absolute;
-    z-index: 0;
-    width: 180%;
-    left: -40%;
-    height: 120%;
-    top: -10%;
-    border-radius: 50% / 40%;
+    content: '';
+    z-index: -1;
     background-color: var(--bs-primary);
-    background: linear-gradient(90deg, rgb(245, 178, 49) 0%, rgb(245, 178, 49) 6%, rgb(241, 138, 33) 100%);
+    background: linear-gradient(0deg, rgba(242,148,37,1) 0%, rgba(244,163,43,0.17689082468925066) 20%, rgba(245,178,49,0.12647065662202384) 80%, rgba(245,178,49,1) 100%);
+    mask-image: url(halftone.svg);
+    mask-mode: luminance;
   }
-`;
+`
 
 const FloatingLeaf = styled.img`
   position: absolute;
-  z-index: -1;
+  z-index: -3;
   width: 30vw;
   max-width: 30em;
   height: auto;
@@ -63,7 +74,8 @@ export const EventsSection = () => {
     const ref = useRef(null);
     useScrollingAnchor('events', ref);
 
-    return <SectionStyled ref={ref}>
+    return <SectionStyled className={'events'} ref={ref}>
+        <SectionBg className={'orange-fruit'} />
         <FloatingLeaf className={'d-lg-none'} src={'/leaf.svg'} />
         <FloatingIconBg src={'/calendar.svg'} />
         <Container>

@@ -5,8 +5,8 @@ import {Container} from "react-bootstrap";
 import {useScrollingAnchor} from "../../utilities";
 
 const ContentStyled = styled(ImageRightComponent)`
-  height: 50vh;
-  min-height: 30em;
+  height: 70vh;
+  min-height: 70vh;
 `;
 
 const FloatingIconBg = styled.img`
@@ -14,7 +14,7 @@ const FloatingIconBg = styled.img`
   max-width: 30em;
   max-height: 90%;
   right: -5vw;
-  top: 5%;
+  top: 20%;
   opacity: 0.2;
   color: var(--bs-white);
 `;
@@ -23,7 +23,7 @@ export const AboutSection = () => {
     const ref = useRef(null);
     useScrollingAnchor('about', ref);
 
-    return <section ref={ref} className={'position-relative'}>
+    return <section ref={ref} className={'about-us position-relative'}>
         <FloatingIconBg src={'/about.png'} />
         <Container>
             <ContentStyled className={'hide-section-image-md align-items-center'} imageData={{src: '/about.png', alt: 'Sketch of techie-person writing some notes'}} >

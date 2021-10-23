@@ -32,7 +32,7 @@ export function useScrollingAnchor(anchorId:string, ref: RefObject<any>) {
             dispatch({type: "REGISTER_REF", anchorId, anchorRef});
         }
 
-        return () =>  dispatch({type: "DEREGISTER_REF", anchorId})
+        return () =>  dispatch({type: "DEREGISTER_REF", anchorId});
     }, [ref, anchorId]);
 }
 
