@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import {css} from "@emotion/react";
 
 export const NavbarStyled = styled(Navbar)`
-  background-color: var(--bs-white)
+  background-color: var(--bs-primary)
 `;
 export const NavbarToggleStyled = styled(Navbar.Toggle)`
   color: var(--bs-white);
@@ -18,11 +18,16 @@ export const NavStyled = styled(Nav)`
 `;
 export const NavLinkStyles = css`
   text-transform: uppercase;
-  font-weight: 500;
-  color: var(--bs-gray-100);
+  user-select: none;
   
+  :not(.external) {
+    font-weight: 500;
+  }
+  :not(.active) {
+    color: var(--bs-gray-100) !important;
+  }
   &.active {
-    color: var(--bs-gray-dark) !important;
+    color: var(--bs-secondary) !important;
   }
 `
 export const LogoStyled = styled.img`
@@ -30,4 +35,17 @@ export const LogoStyled = styled.img`
   height: 4em;
   max-height: 100%;
   width: auto;
+`;
+
+export const ImageStyled = styled.img`
+  width: 1.8em;
+  height: 1.8em;
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+`;
+
+export const ExternalLink = styled(Nav.Link)`
+  font-weight: 700;
 `;

@@ -44,8 +44,8 @@ export const HeroSection = () => {
                 <h1>CODE FOR ORLANDO</h1>
 
                 <p>
-                    A brigade of <a rel={'noopener'} href={'https://www.codeforamerica.org/'} target={'_blank'}>Code for America</a>{' '}
-                    based in <a rel={'noopener'} href={'https://www.orlando.gov'} target={'_blank'}>Orlando, Florida - The City
+                    A brigade of <a rel={'noreferrer'} href={'https://www.codeforamerica.org/'} target={'_blank'}>Code for America</a>{' '}
+                    based in <a rel={'noreferrer'} href={'https://www.orlando.gov'} target={'_blank'}>Orlando, Florida - The City
                     Beautiful</a>. We are civic techies looking for people of any skill set whose interested to improve
                     our community and governmental services.
                 </p>
