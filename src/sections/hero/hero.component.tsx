@@ -16,9 +16,7 @@ const SectionStyled = styled.section`
   position: relative;
 
   ::before {
-    //background-image: linear-gradient(00deg, rgb(255, 255, 255) 0%, rgb(255, 253, 249) 75%, rgb(255, 124, 0) 100%);
     background-size: cover;
-    //mask-image: url(halftone.svg);
     content: '';
     position: absolute;
     width: 100%;
@@ -40,14 +38,14 @@ const FloatingIconBg = styled.img`
 
 export const HeroSection = () => {
     return <SectionStyled className={'hero position-relative'}>
-        <FloatingIconBg src={'/logo_small_orange.svg'} />
+        <FloatingIconBg alt={''} role={'presentation'} src={'/logo_small_orange.svg'} />
         <Container>
             <ContentStyled className={'content align-items-center'} isHero imageData={{src: '/person_sketch.png', alt: 'Sketch of techie-person writing some notes'}} >
-                <h1>Code for Orlando</h1>
+                <h1>CODE FOR ORLANDO</h1>
 
                 <p>
-                    A brigade of <a href={'https://www.codeforamerica.org/'} target={'_blank'}>Code for America</a>{' '}
-                    based in <a href={'https://www.orlando.gov'} target={'_blank'}>Orlando, Florida - The City
+                    A brigade of <a rel={'noopener'} href={'https://www.codeforamerica.org/'} target={'_blank'}>Code for America</a>{' '}
+                    based in <a rel={'noopener'} href={'https://www.orlando.gov'} target={'_blank'}>Orlando, Florida - The City
                     Beautiful</a>. We are civic techies looking for people of any skill set whose interested to improve
                     our community and governmental services.
                 </p>

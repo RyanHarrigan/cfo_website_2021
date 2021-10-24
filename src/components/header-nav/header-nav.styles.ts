@@ -27,7 +27,7 @@ export const NavLinkStyles = css`
 `
 export const LogoStyled = styled.img`
   padding: 0 0 0.5em;
-  height: 100%;
+  height: 4em;
+  max-height: 100%;
   width: auto;
-  max-height: 5em;
 `;

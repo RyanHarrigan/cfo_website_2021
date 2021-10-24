@@ -76,8 +76,8 @@ export const EventsSection = () => {
 
     return <SectionStyled className={'events'} ref={ref}>
         <SectionBg className={'orange-fruit'} />
-        <FloatingLeaf className={'d-lg-none'} src={'/leaf.svg'} />
-        <FloatingIconBg src={'/calendar.svg'} />
+        <FloatingLeaf alt={''} role={'presentation'} className={'d-lg-none'} src={'/leaf.svg'} />
+        <FloatingIconBg alt={''} role={'presentation'} src={'/calendar.svg'} />
         <Container>
             <ContentStyled className={'hide-section-image-md align-items-center'} imageData={{src: '/calendar.svg', alt: 'Calendar symbol'}} >
                 <h2>Events</h2>
@@ -89,13 +89,13 @@ export const EventsSection = () => {
 
                 <div className={"my-4 d-flex flex-wrap justify-content-center"}>
                     <Button className={'d-flex my-3 align-items-center mx-3'} variant="meetup" size="lg" href={'https://www.meetup.com/Code-For-Orlando'} target={'_blank'}>
-                        <ButtonImage src={'/meetup.svg'} width={40} height={40} /><span className={'px-2'}>Meetup</span>
+                        <ButtonImage alt={''} role={'presentation'} src={'/meetup.svg'} width={40} height={40} /><span className={'px-2'}>Meetup</span>
                     </Button>
                     <Button className={'d-flex my-3 align-items-center mx-3'} variant="eventbrite" size="lg" href={'https://www.eventbrite.com/o/code-for-orlando-33511214869'} target={'_blank'}>
-                        <ButtonImage src={'/eventbrite.svg'} width={40} height={40} /><span className={'px-2'}>Eventbrite</span>
+                        <ButtonImage alt={''} role={'presentation'} src={'/eventbrite.svg'} width={40} height={40} /><span className={'px-2'}>Eventbrite</span>
                     </Button>
                     <Button className={'d-flex my-3 align-items-center mx-3'} variant="get-involved" size="lg" href={'https://docs.google.com/forms/d/e/1FAIpQLSdb15ewHn06IMLzaWPrqqrEsfh7Xso2A5N4OIkHDpYJ7Z2ajA/viewform'} target={'_blank'}>
-                        <ButtonImage src={'/logo_small_white.svg'} width={40} height={40} /><span className={'px-2'}>Get Involved</span>
+                        <ButtonImage alt={''} role={'presentation'} src={'/logo_small_white.svg'} width={40} height={40} /><span className={'px-2'}>Get Involved</span>
                     </Button>
                 </div>
             </ContentStyled>

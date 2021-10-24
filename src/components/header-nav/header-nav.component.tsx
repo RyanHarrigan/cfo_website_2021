@@ -17,11 +17,6 @@ const Toggle = ({ariaControls}: {ariaControls: string}) => {
     </NavbarToggleStyled>
 }
 
-const ImageStyled = styled.img`
-  width: 1.5em;
-  height: 1.5em;
-`;
-
 const ExternalLink = styled(Nav.Link)`
   text-decoration: underline;
 `;
