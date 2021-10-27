@@ -47,8 +47,7 @@ export const ScrollingLink = ({toAnchor, children, cssStyles, onClick: callParen
         const anchorRef: any = _.get(anchorRefs, toAnchor, null)
 
         try {
-            // maintains browser history
-            window.location.href = `${window.location.protocol}//${window.location.host}#${toAnchor}`;
+            // window.location.href = `${window.location.protocol}//${window.location.host}#${toAnchor}`; // maintains browser history
 
             anchorRef?.scrollIntoView({
                 behavior: "smooth",

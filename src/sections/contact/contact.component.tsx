@@ -1,18 +1,8 @@
 import React, {useRef} from 'react';
 import {SectionImageComponent} from "../../components";
-import styled from "@emotion/styled";
 import {Col, Container, Row} from "react-bootstrap";
 import {useScrollingAnchor} from "../../utilities";
-
-const ContentStyled = styled(Row)`
-  height: 50vh;
-  min-height: 30em;
-`;
-
-const SectionStyled = styled.section`
-  color: var(--bs-white);
-  background-color: var(--bs-primary);
-`;
+import {ContentStyled, SectionStyled} from "./contact.styles";
 
 export const ContactSection = () => {
     const ref = useRef(null);
