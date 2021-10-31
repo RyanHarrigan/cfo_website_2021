@@ -8,7 +8,7 @@ export const ContactSection = () => {
     const ref = useRef(null);
     useScrollingAnchor('contact', ref);
 
-    return <SectionStyled className={'contact'} ref={ref}>
+    return <SectionStyled id={'contact'} className={'contact'} ref={ref}>
         <Container>
             <ContentStyled className={'content justify-content-md-center align-content-center align-content-md-unset align-items-center'}>
                 <Col

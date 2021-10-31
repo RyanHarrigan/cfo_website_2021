@@ -1,5 +1,5 @@
 import React, {useRef} from 'react';
-import {Button, Container} from "react-bootstrap";
+import {Container} from "react-bootstrap";
 import {useScrollingAnchor} from "../../utilities";
 import {SectionStyled, SectionBg, FloatingIconBg, FloatingLeaf, ContentStyled, ButtonStyled, ButtonImage} from './events.styles';
 
@@ -7,7 +7,7 @@ export const EventsSection = () => {
     const ref = useRef(null);
     useScrollingAnchor('events', ref);
 
-    return <SectionStyled className={'events'} ref={ref}>
+    return <SectionStyled id={'events'} className={'events'} ref={ref}>
         <SectionBg className={'orange-fruit'} />
         <FloatingLeaf alt={''} role={'presentation'} className={'d-lg-none'} src={'/leaf.svg'} />
         <FloatingIconBg alt={''} role={'presentation'} src={'/calendar.svg'} />
